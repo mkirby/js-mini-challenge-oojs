@@ -29,10 +29,10 @@ const handleNewPlayerSubmit = event => {
   fetch(url, config)
     .then(r => r.json())
     .then(playerObj => {
-      // const playerComponent = new PlayerComponent(playerObj)
-      // console.log(playerComponent)
-      // playerComponent.render(playerContainer)
-      renderPlayer(playerObj)
+      const pContainer = new PlayerContainer(playerObj)
+      pContainer.render(playerContainer)
+      console.log(pContainer)
+      // renderPlayer(playerObj)
     })
 }
 
